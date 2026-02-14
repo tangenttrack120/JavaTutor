@@ -61,5 +61,157 @@ public class Main {
         // arithmetics, assignment, comparison, and logical operator is the same as any other languages
         // operator precedence (hierarchy): ( () ) -> )*, /, %) -> (+, -) -> (>, <, >=, <=) -> (==, !=) -> (&&) -> (||) -> (=)
 
+        // Java String manipulation
+        String StrManipulation = "Hello World";
+        System.out.println(StrManipulation.length()); // return String Length: 11
+        System.out.println(StrManipulation.toUpperCase()); // Uppercase String: HELLO WORLD
+        System.out.println(StrManipulation.toLowerCase()); // Lowercase String: hello world
+        System.out.println(StrManipulation.indexOf("World")); // return index of first occurrence of specified string: 6
+        System.out.println(StrManipulation.charAt(6)); // return character at specified index: W
+        System.out.println(StrManipulation.equals("Hello World")); // check if a string is the same as the other one: true
+        System.out.println(StrManipulation.trim()); // remove whitespace in the beginning and the end of the string
+        // adding special character in string
+        // \' : single quote, \" : double quote, \\ : backslash
+        // \n : new line, \t : tab, \b : backspace, \r : carriage return, \f : form feed
+        // Java Math
+        int a = -10, b = 5, c = 15;
+        int max = Math.max(a, b); // return the biggest value
+        int min = Math.min(a, b); // return the lowest value
+        double root = Math.sqrt(c); // return the square root
+        int absoluteX = Math.abs(a); // return the absolute value
+        double power = Math.pow(c, b); // return b power of c
+        System.out.println(a + " " + b + " " + c + " " + max + " " + min + " " + root + " " + absoluteX + " " + power);
+        // rounding method
+        double d = 19.4;
+        long round = Math.round(d);  // round to the nearest integer: 19
+        double ceil = Math.ceil(d);   // rounds up (returns the smallest integer greater than or equal to x): 20
+        double floor = Math.floor(d);  // rounds down (returns the largest integer less than or equal to x): 4.0
+        // random number
+        double random = Math.random();
+        // getting from 0 to 100
+        int randomNum = (int)(Math.random() * 101);  // 0 to 100
+        // conditioning
+        int weather = 2; // 1 = raining, 2 = sunny, 3 = cloudy
+
+        if (weather == 1) {
+            boolean bringUmbrella = true;
+            if (bringUmbrella) {
+                System.out.println("you're good");
+            } else {
+                System.out.println("Bring an umbrella.");
+            }
+        } else if (weather == 2) {
+            boolean bringSunGlasses = true;
+            if (bringSunGlasses) {
+                System.out.println("Wear sunglasses.");
+            } else {
+                System.out.println("Don't forget to bring sun glasses.");
+            }
+        } else {
+            System.out.println("Just go outside normally.");
+        } // Outputs "Wear sunglasses."
+        // short hand if else
+        int time = 20;
+        String result = (time < 18) ? "Good day." : "Good evening.";
+        System.out.println(result);
+        // Nested ternary (useful if you handle more than 2 possible outcome
+        String message = (time < 12) ? "Good morning."
+                : (time < 18) ? "Good afternoon."
+                : "Good evening.";
+        System.out.println(message);
+        int day = 4;
+        // switch case
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Where the fuck do you live?");
+        } // Outputs "Thursday" (day 4)
+        // while loop
+        int countdown = 3;
+
+        while (countdown > 0) {
+            System.out.println(countdown);
+            countdown--;
+        }
+        System.out.println("Happy New Year!!");
+        // do/while loop
+        int i = 10;
+
+        do {
+            System.out.println("i is " + i);
+            i++;
+        } while (i < 5);
+        // for loop
+        for (i = 5; i > 0; i--) {
+            System.out.println(i);
+        }
+        // nested loop
+        for (i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3; j++) {
+                System.out.print(i * j + " ");
+            }
+            System.out.println();
+        }
+        // for each loop = loop for array (kind of)
+        String[] cars = new String[4]; // new sting for max length of array
+        cars[0] = "Bugatti";
+        cars[1] = "koenigsegg";
+        cars[2] = "Pagani";
+        cars[3] = "Rolls Royce";
+
+        for (String car : cars) {
+            System.out.println(car);
+        }
+        // break and continue usage the same as c#
+
+        int[] numbers = {1, 2, 3, 4};
+        String[] motor = new String[] {"Yamaha", "Honda", "Kawasaki"};
+        for (i = 0; i < motor.length; i++) {
+            System.out.println(motor[i]);
+        }
+        // 2d array
+        int[][] myNumbers = { {1, 4, 2}, {3, 6, 8} };
+        // 3d array
+        int [][][] arr3d = {
+                {{1,2,3}, {4,5,6}, {7,8,9}},
+                {{10,11,12}, {13,14,15}, {16,17,18}},
+                {{19,20,21}, {22,23,24}, {25,26,27}}
+        };
+
+        // accessing elements
+        System.out.println(myNumbers[1][2]); // 2nd row 3rd column: 8
+        for (int row = 0; row < myNumbers.length; row++) {
+            for (int col = 0; col < myNumbers[row].length; col++) {
+                System.out.println("myNumbers[" + row + "][" + col + "] = " + myNumbers[row][col]);
+            }
+        }
+        System.out.println(arr3d[0][1][2]); // 1st layer 2nd row 3rd column: 6
+        for (int lyr = 0; lyr < arr3d.length; lyr++) {
+            for (int row = 0; row < arr3d[lyr][0].length; row++) {
+                for (int col = 0; col < arr3d[lyr][row].length; col++) {
+                    System.out.print(arr3d[lyr][row][col] + " ");
+                }
+            }
+        }
     }
 }
