@@ -12,8 +12,42 @@ public class Main {
         this is the entry point for any standalone Java program
         explanation in notion
      */
+    /*
+        To make a method you have to declare where the method belongs
+        will it return value
+        and the name of the method
+     */
+    // static, not returning value, method name
+    static void myMethod(String name, int age){ // Parameter: getting argument type string and integer and keep it as name and age
+        System.out.println("Hello " + name);
+        if(age < 18){
+            System.out.println("You are too young");
+        } else {
+            System.out.println("You are passed the age check");
+        }
+    }
+    // char return character and int return interger
+    static char charMethod(String name){
+        if (name != null && name.length() != 0){
+            return name.charAt(0);
+        }
+        return ' ';
+    }
+    static int intMethod(String name){
+        return name.length();
+    }
+    // same like in C# you can do method overloading if the method type is different
+    // Java scope
+    /*
+    in Java variable declared in a method can only accessible in that method
+    there are also a block of code ({} curly braces). variable declared there can only accessible there
+    block of code can stand alone or be part of if, while, or for
+    inside the for loop condition (inside parentheses) will only accessible inside the loop
+     */
+
     public static void main(String[] args){
         System.out.println("Hello World");
+        myMethod("Richard", 19); // calling method and passing arguments
         /*
             System.out is a standard mechanism to output data to the standard output stream
             System is a final class built-in java.lang package
