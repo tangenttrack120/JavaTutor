@@ -44,6 +44,7 @@ public class Main {
     block of code can stand alone or be part of if, while, or for
     inside the for loop condition (inside parentheses) will only accessible inside the loop
      */
+    // Class, object, and constructor are absolutely the same as c#
 
     public static void main(String[] args){
         System.out.println("Hello World");
